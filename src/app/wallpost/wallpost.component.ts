@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Wallpost } from '../wallpost';
+import { POSTS } from '../mock-posts';
 
 @Component({
   selector: 'app-wallpost',
@@ -14,10 +15,5 @@ export class WallpostComponent implements OnInit {
   ngOnInit() {
   }
 
-  wallpost: Wallpost = {
-     message: 'this is a temporary message',
-     image: 'https://racetrace.net/m/uploads/thumb5dab3cd1eb32720191019_123535.jpg',
-     user: 'Deana',
-     timestamp: '1573563936',
-  };
+  wallposts = POSTS;
 }

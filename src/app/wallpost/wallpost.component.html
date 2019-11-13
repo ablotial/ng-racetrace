@@ -1,3 +1,9 @@
-<h4>{{wallpost.user}} said:</h4>
-<div>{{wallpost.message}}</div>
-<div>{{wallpost.timestamp | date }}</div>
+<h2>Motivation Wall</h2>
+<ul class="wall">
+	<li *ngFor="let wallpost of wallposts">
+		<span class="username">{{wallpost.user}}</span> says:
+		<span>{{wallpost.message}}</span>
+		<span>{{wallpost.timestamp | date }}</span>
+	</li>
+</ul>
+
