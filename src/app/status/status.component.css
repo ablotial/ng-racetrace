@@ -1,0 +1,38 @@
+table {
+	width: 100%;
+	margin: 0 auto;
+	border-spacing: 1;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+table * {
+	position: relative;
+}
+table td, table th {
+	padding-left: 8px;
+	text-align: center;
+}
+th {
+	font-size: 16px;
+	color: #FFF;
+	background-color: blue;
+	line-height: 1.2;
+	font-weight: unset;
+}    
+tr:nth-child(odd) {
+	background-color: #aaa;
+}
+tr:nth-child(even) {
+	background-color: #ddd;
+}
+tr {
+	height: 1.6em;
+	font-size: 15px;
+	line-height: 1.2;
+	font-weight: unset;
+}

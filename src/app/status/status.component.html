@@ -1,0 +1,29 @@
+<h2>Live Status</h2>
+<table>
+	<tr>
+		<th>Marker</th>
+		<th>User</th>
+		<th>Last Data</th>
+		<th>Avg Speed</th>
+		<th>Avg Pace</th>
+		<th>Cur Speed</th>
+		<th>Cur Pace</th>
+		<th>Total Time</th>
+		<th>Total Dist</th>
+		<th>Course Location</th>
+		<th>Time Rem</th>
+	</tr>
+	<tr *ngFor="let runner of runners">
+		<td>{{runner.id}}</td>
+		<td>{{runner.name}}</td>
+		<td>{{runner.lastData * 1000 | date:'mediumTime'}}</td>
+		<td>{{runner.avgSpeed}}</td>
+		<td>{{runner.avgPace}}</td>
+		<td>{{runner.curSpeed}}</td>
+		<td>{{runner.curPace}}</td>
+		<td>{{runner.time}}</td>
+		<td>{{runner.dist}}</td>
+		<td>{{runner.loc}}</td>
+		<td>{{runner.time}}</td>
+	</tr>
+</table>
