@@ -1,9 +1,9 @@
 <h2>Motivation Wall</h2>
-<ul class="wall">
+<ul class="post">
 	<li *ngFor="let wallpost of wallposts">
-		<span class="username">{{wallpost.user}}</span> says:
-		<span>{{wallpost.message}}</span>
-		<span>{{wallpost.timestamp | date }}</span>
+		<div class="metadata">{{wallpost.user}} says:</div>
+		<div *ngIf="wallpost.message" class="message">{{wallpost.message}}</div>
+		<div *ngIf="wallpost.image" class="message"><img src={{wallpost.image}}></div>
+		<div class="timestamp metadata">{{wallpost.timestamp * 1000 | date:'medium' }}</div>
 	</li>
 </ul>
-

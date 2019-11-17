@@ -1,0 +1,29 @@
+.post {
+	margin: 0 0 2em 0;
+	list-style-type: none;
+	padding: 0;
+}
+.post li {
+	position: relative;
+	left: 0;
+	background-color: #EEE;
+	margin: .5em;
+	padding: .3em 0;
+	border-radius: 4px;
+}
+.post li.new {
+	background-color: #CFD8DC;
+	color: white;
+}
+
+.post .metadata {
+	font-style: italic;
+}
+
+.post .timestamp {
+	text-align: right;
+}
+
+.post .message {
+	text-indent: 3em;
+}
