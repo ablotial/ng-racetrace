@@ -1,7 +1,7 @@
 import { Wallpost } from './wallpost';
 
 export const POSTS: Wallpost[] = [
-  {  message: 'this is a temporary message',
+  {  message: 'One of these days I will beat Other Ryan.....',
      image: 'https://racetrace.net/m/uploads/thumb5dab3cd1eb32720191019_123535.jpg',
      user: 'Deana',
      timestamp: '1573563936' 

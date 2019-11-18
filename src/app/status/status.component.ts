@@ -10,11 +10,11 @@ import { RUNNERS } from '../mock-runners';
 })
 export class StatusComponent implements OnInit {
 
+  runners: Runner[] = RUNNERS;
+  collapsed: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  runners: Runner[] = RUNNERS;
-
 }

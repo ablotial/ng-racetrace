@@ -1,6 +1,7 @@
 <h2>Live Status</h2>
 <table>
 	<tr>
+		<th><button (click)="collapsed = !collapsed">{{collapsed ? '+' : '-' }}</button></th>
 		<th>Marker</th>
 		<th>User</th>
 		<th>Last Data</th>
@@ -13,8 +14,9 @@
 		<th>Course Location</th>
 		<th>Time Rem</th>
 	</tr>
+	<ng-template [ngIf]="!collapsed">
 	<tr *ngFor="let runner of runners">
-		<td>{{runner.id}}</td>
+		<td colspan="2">{{runner.id}}</td>
 		<td>{{runner.name}}</td>
 		<td>{{runner.lastData * 1000 | date:'mediumTime'}}</td>
 		<td>{{runner.avgSpeed}}</td>
@@ -26,4 +28,5 @@
 		<td>{{runner.loc}}</td>
 		<td>{{runner.time}}</td>
 	</tr>
+	</ng-template>
 </table>

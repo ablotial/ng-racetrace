@@ -17,6 +17,20 @@ export const RUNNERS: Runner[] = [
 },
 {
         id: 2,
+        name: 'Other Ryan',
+        lastData: 1573931120,
+        avgSpeed: 5.9,
+        avgPace: 10.7,
+        curSpeed: 5.0,
+        curPace: 12.0,
+        time: 61,
+        dist: 5.1,
+        loc: 5.0,
+        remain: 83,
+
+},
+{
+        id: 3,
         name: 'Deana',
         lastData: 1573931082,
         avgSpeed: 5.8,
@@ -27,6 +41,5 @@ export const RUNNERS: Runner[] = [
         dist: 4.9,
         loc: 4.8,
         remain: 85,
-
 }
 ]
