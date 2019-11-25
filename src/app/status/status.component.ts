@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Runner } from '../runner';
-import { RUNNERS } from '../mock-runners';
+import { RunnerService } from '../runner.service';
 
 @Component({
   selector: 'app-status',
@@ -10,11 +10,15 @@ import { RUNNERS } from '../mock-runners';
 })
 export class StatusComponent implements OnInit {
 
-  runners: Runner[] = RUNNERS;
-  collapsed: boolean = false;
+  runners: Runner[];
 
-  constructor() { }
+  constructor( private runnerService: RunnerService ) { }
 
   ngOnInit() {
+     this.getRunners();
+  }
+
+  getRunners(): void {
+     this.runnerService.getRunners().subscribe( runners => this.runners = runners );
   }
 }

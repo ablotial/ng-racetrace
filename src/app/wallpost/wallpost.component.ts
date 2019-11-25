@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Wallpost } from '../wallpost';
-import { POSTS } from '../mock-posts';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-wallpost',
@@ -10,10 +10,15 @@ import { POSTS } from '../mock-posts';
 })
 export class WallpostComponent implements OnInit {
 
-  constructor() { }
+  constructor( private postService: PostService ) { }
 
   ngOnInit() {
+     this.getPosts();
   }
 
-  wallposts = POSTS;
+  wallposts: Wallpost[];
+
+  getPosts(): void {
+     this.postService.getPosts().subscribe( wallposts => this.wallposts = wallposts );
+  }
 }
